@@ -35,6 +35,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser()); // cookieParser(secretKey(to use encrypted cookie), optionObj)
 
+app.get("/",(req,res)=>{
+  res.json({"dongkyun":"i made it lol and it seems that I can't not type korean properly here lol"})
+})
+
+
 app.get("/api/user/auth",auth, (req, res) => {
  res.status(200).json({
    _id:req._id,
